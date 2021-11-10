@@ -6,16 +6,16 @@
 import requests
 
 # 常用备份文件名
-files = ['web', 'website', 'backup', 'back', 'www', 'wwwroot', 'temp']
+fileNames = ['web', 'website', 'backup', 'back', 'www', 'wwwroot', 'temp']
 
 # 常用备份文件类型
 suffixes = ['tar', 'tar.gz', 'zip', 'rar']
 
 
-for file in files:
+for fileName in fileNames:
     for suffix in suffixes:
         target = ''
-        bak = file + '.' + suffix
+        bak = fileName + '.' + suffix
         url = target + bak
         # print(url)
         resp = requests.get(url=url)
